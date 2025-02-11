@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Even Numbers</title>
+</head>
+<body>
+    <label for="number">Enter an odd number:</label>
+    <input type="number" id="number">
+    <button onclick="showNextEvenNumbers()">Show Next Even Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function showNextEvenNumbers() {
+            const num = parseInt(document.getElementById("number").value);
+            if (num % 2 !== 0) {
+                document.getElementById("result").innerText = `Next three even numbers: ${num + 1}, ${num + 3}, ${num + 5}`;
+            } else {
+                document.getElementById("result").innerText = "Please enter an odd number.";
+            }
+        }
+    </script>
+</body>
+</html>
